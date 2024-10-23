@@ -1,3 +1,30 @@
+body {
+  font-family: "Nunito Sans", sans-serif;
+  margin: 0;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #0e1225;
+  background-color: #fff !important;
+}
+/* css nav */
+.navbar-collapse {
+  background: white;
+}
+.nav-link {
+  color: #4a5259 !important;
+}
+.account-style {
+  border: 1px solid #0e1225;
+  border-radius: 30px;
+  padding-inline: 30px;
+}
+.account-style span {
+  font-weight: 700;
+  color: black;
+}
+/* css slide */
 .single_advisor_profile {
   position: relative;
   margin-bottom: 50px;
