@@ -1,12 +1,14 @@
 body {
   font-family: "Nunito Sans", sans-serif;
   margin: 0;
-  font-family: "Nunito Sans", sans-serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
   color: #0e1225;
   background-color: #fff !important;
+}
+.min-vh-100 {
+  min-height: 100vh;
 }
 /* css nav */
 .navbar-collapse {
@@ -16,14 +18,37 @@ body {
   color: #4a5259 !important;
 }
 .account-style {
-  border: 1px solid #0e1225;
+  border: 1px solid gray;
   border-radius: 30px;
-  padding-inline: 30px;
+  padding-right: 5px;
 }
 .account-style span {
   font-weight: 700;
   color: black;
 }
+.item-account {
+  color: #0069db;
+  border: 1px solid #0069db;
+  padding: 20px;
+  margin: 7px;
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+.account-login {
+  background-color: #0069db;
+  color: white;
+}
+.account-login:hover {
+  background-color: #025bba;
+  transition: 0.5s;
+}
+.account-register:hover {
+  background-color: #025bba;
+  color: white;
+  transition: 0.5s;
+}
+
 /* css slide */
 .single_advisor_profile {
   position: relative;
@@ -401,4 +426,44 @@ body {
 
 #btnnav {
   color: red !important;
+}
+/* page login */
+.title-login {
+  font-weight: 700;
+}
+.forgetpassword {
+  font-size: 15px;
+  color: #0069db;
+}
+.forgetpassword label {
+  cursor: pointer;
+}
+.btn-login {
+  background-color: #0069db;
+  font-size: 1rem;
+}
+.btn-login:hover {
+  background-color: #0452a5;
+  transition: 1s;
+}
+.btn-login-google {
+  border: 1px solid gray;
+  font-size: 1rem;
+}
+.btn-login-google:hover {
+  border: 1px solid gray;
+  background-color: gray;
+  color: white !important;
+}
+.btn-login-facebook {
+  border: 1px solid gray;
+  font-size: 1rem;
+}
+.btn-login-facebook:hover {
+  border: 1px solid gray;
+  background-color: gray;
+  color: white !important;
+}
+.orstyle {
+  font-size: 15px;
 }

@@ -1,10 +1,10 @@
-import logo from "./logo.svg";
 import "./App.css";
-import Header from "./layouts/Header";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import About from "./pages/About";
 import Layout from "./layouts/Layout";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import ProductDetail from "./components/ProductDetail";
 
 function App() {
   return (
@@ -12,7 +12,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/authen/login" element={<Login />} />
+          <Route path="/authen/register" element={<Register />} />
+          <Route path="/productDetail" element={<ProductDetail />} />
         </Route>
       </Routes>
     </BrowserRouter>

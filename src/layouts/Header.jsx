@@ -1,7 +1,10 @@
+import { Link, useNavigate } from "react-router-dom";
+
 const Header = () => {
+  const navigate = useNavigate();
   return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary">
-      <div className="container-fluid">
+    <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+      <div className="container-fluid p-0">
         <button
           className="navbar-toggler"
           type="button"
@@ -14,29 +17,29 @@ const Header = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <div className="me-auto">
+          <Link to="/" className="me-auto">
             <img
               style={{ width: "70px" }}
               src="https://m.media-amazon.com/images/I/61E+ahhGuJL.jpg"
               alt=""
             />
-          </div>
+          </Link>
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
+              <Link className="nav-link active" aria-current="page" to="">
                 Sản Phẩm
-              </a>
+              </Link>
             </li>
             <li className="nav-item dropdown">
-              <a
+              <Link
                 className="nav-link dropdown-toggle"
-                href="#"
+                to=""
                 role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
                 Chọn Theo Thương Hiệu
-              </a>
+              </Link>
               <ul className="dropdown-menu">
                 <li>
                   <a className="dropdown-item" href="#">
@@ -51,9 +54,9 @@ const Header = () => {
               </ul>
             </li>
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
+              <Link className="nav-link active" aria-current="page" to="">
                 Giới Thiệu
-              </a>
+              </Link>
             </li>
             <li className="nav-item d-none d-md-block d-sm-block d-xs-none">
               <a className="nav-link active" aria-current="page" href="#">
@@ -61,14 +64,14 @@ const Header = () => {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
+              <Link className="nav-link active" aria-current="page" to="">
                 Liên Hệ
-              </a>
+              </Link>
             </li>
             <li className="nav-item dropdown account-style">
-              <a
-                className="nav-link dropdown-toggle mt-1 text-center"
-                href="#"
+              <Link
+                className="nav-link dropdown-toggle text-center"
+                to=""
                 role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
@@ -79,18 +82,32 @@ const Header = () => {
                   alt=""
                 />{" "}
                 <span>Tài Khoản</span>
-              </a>
-              <ul className="dropdown-menu">
+              </Link>
+              <ul className="dropdown-menu dropdown-menu-end">
                 <li>
-                  <a className="dropdown-item" href="#">
-                    Đăng Nhập
-                  </a>
+                  <div className="dropdown-item d-flex justify-content-between bg-white">
+                    <div
+                      onClick={() => navigate("/authen/login")}
+                      className="item-account account-login"
+                    >
+                      Đăng nhập
+                    </div>
+                    <div
+                      onClick={() => navigate("/authen/register")}
+                      className="item-account account-register"
+                    >
+                      Đăng ký
+                    </div>
+                  </div>
                 </li>
                 <li>
+                  <hr className="mx-3" />
+                </li>
+                {/* <li>
                   <a className="dropdown-item" href="#">
                     Đăng Ký
                   </a>
-                </li>
+                </li> */}
               </ul>
             </li>
             <li className="nav-item d-none d-md-block d-sm-block d-xs-none">
@@ -99,9 +116,9 @@ const Header = () => {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
+              <Link className="nav-link active" aria-current="page" to="">
                 Hỗ Trợ
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
