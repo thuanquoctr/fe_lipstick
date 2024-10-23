@@ -1,6 +1,8 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 const Card = () => {
   const [value, setValue] = useState(2);
+  const navigate = useNavigate();
   return (
     <div
       className="single_advisor_profile wow fadeInUp"
@@ -34,7 +36,10 @@ const Card = () => {
       {/* Team Details */}
       <div className="single_advisor_details_info">
         <h6>
-          <i class="bi bi-bag-plus fs-4"></i>
+          <i
+            onClick={() => navigate("/productDetail")}
+            class="bi bi-bag-plus fs-4"
+          ></i>
           <i class="bi bi-eye fs-4 mx-2"></i>
           <i class="bi bi-suit-heart fs-4"></i>
         </h6>
